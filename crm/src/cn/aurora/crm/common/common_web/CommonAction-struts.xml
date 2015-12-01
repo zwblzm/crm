@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="common" extends="struts-default" namespace="/common">
+		<action name="common_*" class="cn.aurora.crm.common.common_web.CommonAction" method="{1}">
+			<result name="topPageSuccess">/WEB-INF/jsps/frame/top.jsp</result>
+			<result name="controlPageSuccess">/WEB-INF/jsps/frame/control.jsp</result>
+			<result name="leftPageSuccess">/WEB-INF/jsps/frame/left.jsp</result>
+			<result name="left1PageSuccess">/WEB-INF/jsps/frame/left1.jsp</result>
+			<result name="left2PageSuccess">/WEB-INF/jsps/frame/left2.jsp</result>
+			<result name="rightPageSuccess">/WEB-INF/jsps/frame/right.jsp</result>
+			
+		</action>
+	
+	</package>
+
+</struts>
