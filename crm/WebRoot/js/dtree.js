@@ -41,20 +41,20 @@ function dTree(objName) {
 		inOrder					: false
 	}
 	this.icon = {
-		root				: '../../images/base.gif',
-		folder			: '../../images/folder.gif',
-		folderOpen	: '../../images/folderopen.gif',
-		node				: '../../images/page.gif',
-		empty				: '../../images/empty.gif',
-		line				: '../../images/line.gif',
-		join				: '../../images/join.gif',
-		joinBottom	: '../../images/joinbottom.gif',
-		plus				: '../../images/plus.gif',
-		plusBottom	: '../../images/plusbottom.gif',
-		minus				: '../../images/minus.gif',
-		minusBottom	: '../../images/minusbottom.gif',
-		nlPlus			: '../../images/nolines_plus.gif',
-		nlMinus			: '../../images/nolines_minus.gif'
+		root				: '/crm/images/base.gif',
+		folder			: '/crm/images/folder.gif',
+		folderOpen	: '/crm/images/folderopen.gif',
+		node				: '/crm/images/page.gif',
+		empty				: '/crm/images/empty.gif',
+		line				: '/crm/images/line.gif',
+		join				: '/crm/images/join.gif',
+		joinBottom	: '/crm/images/joinbottom.gif',
+		plus				: '/crm/images/plus.gif',
+		plusBottom	: '/crm/images/plusbottom.gif',
+		minus				: '/crm/images/minus.gif',
+		minusBottom	: '/crm/images/minusbottom.gif',
+		nlPlus			: '/crm/images/nolines_plus.gif',
+		nlMinus			: '/crm/images/nolines_minus.gif'
 	};
 	this.obj = objName;
 	this.aNodes = [];

@@ -13,4 +13,8 @@ public class MyActionSupport extends ActionSupport{
 	
 	protected static final String EMPACTION_LOGINSUCCESS="loginSuccess";
 	protected static final String EMPACTION_LOGINERROR="loginError";
+	
+	protected static final String DEPACTION_LISTPAGESUCCESS="listPageSuccess";
+	protected static final String DEPACTION_ADDSUCCESS="addSuccess";
+	protected static final String DEPACTION_ADDPAGESUCCESS="addPageSuccess";
 }

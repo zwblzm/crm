@@ -14,15 +14,15 @@
 		http://www.springframework.org/schema/tx 
 		http://www.springframework.org/schema/tx/spring-tx.xsd
 		">
-	<bean id="empAction" class="cn.aurora.crm.hr.emp.web.EmpAction" scope="prototype">
-		<property name="empEbi" ref="empEbi"></property>
+	<bean id="depAction" class="cn.aurora.crm.hr.dep.web.DepAction" scope="prototype">
+		<property name="depEbi" ref="depEbi"></property>
 	</bean>
 	
-	<bean id="empEbi" class="cn.aurora.crm.hr.emp.business.ebo.EmpEbo">
-		<property name="empDao" ref="empDao"></property>
+	<bean id="depEbi" class="cn.aurora.crm.hr.dep.business.ebo.DepEbo">
+		<property name="depDao" ref="depDao"></property>
 	</bean>
 	
-	<bean id="empDao" class="cn.aurora.crm.hr.emp.dao.impl.EmpImpl">
+	<bean id="depDao" class="cn.aurora.crm.hr.dep.dao.impl.DepImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 </beans>

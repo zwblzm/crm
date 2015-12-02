@@ -2,8 +2,8 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <HTML><HEAD>
-<link href="${pageContext.request.contextPath}/html/css/dtree.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="${pageContext.request.contextPath}/html/js/dtree.js"></script>
+<link href="${pageContext.request.contextPath}/css/dtree.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/dtree.js"></script>
 <META http-equiv=Content-Type content="text/html; charset=utf-8">
 </HEAD>
 <BODY bgColor=#DDF0FB leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
@@ -28,7 +28,7 @@
 		d.add('0104','01','就业部');
 		d.add('010401','0104','就业情况','${pageContext.request.contextPath}/html/dept/listDept.html','','right');
 		d.add('0105','01','人力资源部');
-		d.add('010501','0105','部门管理','${pageContext.request.contextPath}/html/dep/listDep.html','','right');
+		d.add('010501','0105','部门管理','${pageContext.request.contextPath}/depAction_listPage.action','','right');
 		d.add('010502','0105','职务管理','${pageContext.request.contextPath}/html/position/listPosition.html','','right');
 		d.add('010503','0105','员工管理','${pageContext.request.contextPath}/html/staff/listStaff.html','','right');
 		document.write(d);
