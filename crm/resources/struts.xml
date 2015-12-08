@@ -12,5 +12,6 @@
 	<constant name="struts.ui.theme" value="simple"></constant>
 	<include file="cn/aurora/crm/hr/emp/web/struts_EmpAction.xml"></include>
 	<include file="cn/aurora/crm/hr/dep/web/struts_DepAction.xml"></include>
+	<include file="cn/aurora/crm/hr/position/web/struts_PosAction.xml"></include>
 	<include file="cn/aurora/crm/common/common_web/CommonAction-struts.xml"></include>
 </struts>

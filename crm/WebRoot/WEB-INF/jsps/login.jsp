@@ -51,7 +51,7 @@ FONT-SIZE: 12px; COLOR: #4b4b4b; LINE-HEIGHT: 18px; TEXT-DECORATION: none
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<input class="btn" type="submit" value=" 登录 " onclick="javascript:document.forms[0].submit();"/>
 					
-					<input class="btn" type="button" value=" 注册 " onclick="document.location='/crm/html/staff/register.html'"/>
+					<input class="btn" type="button" value=" 注册 " onclick="document.location='${pageContext.request.contextPath}/empAction_registPage.action'"/>
 					
 				</s:form>
 			</td>

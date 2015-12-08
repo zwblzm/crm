@@ -4,6 +4,7 @@ public class EmpModel {
 	private String id;
 	private String code;
 	private String name;
+	private String realName;
 	private String password;
 	private String repassword;
 	private Integer gender ;
@@ -64,6 +65,14 @@ public class EmpModel {
 	}
 	public void setRepassword(String repassword) {
 		this.repassword = repassword;
+	}
+	
+	
+	public String getRealName() {
+		return realName;
+	}
+	public void setRealName(String realName) {
+		this.realName = realName;
 	}
 	@Override
 	public String toString() {

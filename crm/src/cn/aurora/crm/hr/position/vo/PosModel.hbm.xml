@@ -3,20 +3,18 @@
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="cn.aurora.crm.hr.emp.vo.EmpModel" table="tbl_emp">
+	<class name="cn.aurora.crm.hr.position.vo.PosModel" table="tbl_position" lazy="false" >
 	
 		<id name="id">
 			<generator class="assigned"></generator>
 		</id>
 		
-		<property name="code"></property>
 		<property name="name"></property>
-		<property name="realName"></property>
-		<property name="password"></property>
-		<property name="gender"></property>
-		<property name="birthday"></property>
-		<property name="entryTime"></property>
-		<property name="status"></property>
+		
+		
+		<many-to-one cascade="save-update" name="dm" class="cn.aurora.crm.hr.dep.vo.DepModel" lazy="false">
+			<column name="did"></column>
+		</many-to-one>
 	</class>
 	
 </hibernate-mapping>

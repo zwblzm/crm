@@ -29,4 +29,9 @@ public class EmpAction extends MyActionSupport{
 		}
 	}
 	
+	public String registPage() {
+		
+		return EMPACTION_REGISTPAGE;
+	}
+	
 }
