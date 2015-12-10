@@ -14,4 +14,5 @@
 	<include file="cn/aurora/crm/hr/dep/web/struts_DepAction.xml"></include>
 	<include file="cn/aurora/crm/hr/position/web/struts_PosAction.xml"></include>
 	<include file="cn/aurora/crm/common/common_web/CommonAction-struts.xml"></include>
+	<include file="cn/aurora/crm/product/lesson/web/struts_LessonAction.xml"></include>
 </struts>

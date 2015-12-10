@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="lessonAction" extends="struts-default" namespace="/">
+		<action name="lessonAction_*" class="lessonAction" method="{1}">
+			<result name="listPageSuccess">/WEB-INF/jsps/lesson/lessonList.jsp</result>
+			<result name="addPageSuccess">/WEB-INF/jsps/lesson/lessonAdd.jsp</result>
+			<result name="addSuccess" type="chain">lessonAction_listPage</result>
+		</action>
+	
+	</package>
+
+</struts>

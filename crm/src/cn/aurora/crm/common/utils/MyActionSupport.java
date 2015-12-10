@@ -23,4 +23,8 @@ public class MyActionSupport extends ActionSupport{
 	protected static final String POSITIONACTION_ADDSUCCESS="addSuccess";
 	protected static final String POSITIONACTION_ADDPAGESUCCESS="addPageSuccess";
 	protected static final String POSITIONACTION_LISTPAGESUCCESS="listPageSuccess";
+	
+	protected static final String LESSONACTION_LISTPAGE="listPageSuccess";
+	protected static final String LESSONACTION_ADDPAGE="addPageSuccess";
+	protected static final String LESSONACTION_ADDLESSON="addSuccess";
 }

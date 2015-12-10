@@ -24,7 +24,7 @@
 		d.add('010203','0102','学生流失情况','${pageContext.request.contextPath}/html/privilege/listPrivilege.html','','right');		
 		d.add('0103','01','教学部');
 		d.add('010301','0103','班级管理','${pageContext.request.contextPath}/html/classesm/listClass.html','','right');
-		d.add('010302','0103','课程类别','${pageContext.request.contextPath}/html/lesson/listLesson.html','','right');
+		d.add('010302','0103','课程类别','${pageContext.request.contextPath}/lessonAction_listPage.action','','right');
 		d.add('0104','01','就业部');
 		d.add('010401','0104','就业情况','${pageContext.request.contextPath}/html/dept/listDept.html','','right');
 		d.add('0105','01','人力资源部');

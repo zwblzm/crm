@@ -18,4 +18,10 @@ public class EmpImpl extends HibernateDaoSupport implements EmpDao{
 		return emps.size()>0?emps.get(0):null;
 	}
 
+	@Override
+	public void addEmploy(EmpModel em) {
+		// TODO Auto-generated method stub
+		this.getHibernateTemplate().save(em);
+	}
+
 }

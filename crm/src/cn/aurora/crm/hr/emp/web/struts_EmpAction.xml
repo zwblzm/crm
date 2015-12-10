@@ -8,6 +8,8 @@
 			<result name="loginSuccess">/WEB-INF/jsps/frame.jsp</result>
 			<result name="loginError">/WEB-INF/jsps/login.jsp</result>
 			<result name="registPage">/WEB-INF/jsps/staff/register.jsp</result>
+			<result name="registSuccess">/WEB-INF/jsps/login.jsp</result>
+			<result name="registInput">/WEB-INF/jsps/staff/register.jsp</result>
 		</action>
 	
 	</package>

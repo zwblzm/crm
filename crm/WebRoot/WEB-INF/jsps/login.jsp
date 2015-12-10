@@ -42,11 +42,11 @@ FONT-SIZE: 12px; COLOR: #4b4b4b; LINE-HEIGHT: 18px; TEXT-DECORATION: none
 				
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="${pageContext.request.contextPath}/images/title.png" width="185" height="26"/><br/><br/>
 					
-					<s:textfield cssClass="msg" name="em.name">用户名：</s:textfield>
+					<s:textfield cssClass="msg" name="em.name" value="admin">用户名：</s:textfield>
 					
 					<br/><br/>
 				
-					<s:password cssClass="msg" name="em.password">密&nbsp;&nbsp;码：</s:password>
+					<s:password cssClass="msg" name="em.password" value="admin" showPassword="true">密&nbsp;&nbsp;码：</s:password>
 					<br/><br/>
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<input class="btn" type="submit" value=" 登录 " onclick="javascript:document.forms[0].submit();"/>

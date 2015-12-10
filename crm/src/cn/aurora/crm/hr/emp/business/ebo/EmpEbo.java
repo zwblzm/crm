@@ -1,5 +1,8 @@
 package cn.aurora.crm.hr.emp.business.ebo;
 
+import java.util.Date;
+
+import cn.aurora.crm.common.utils.UUIDUtils;
 import cn.aurora.crm.hr.emp.business.ebi.EmpEbi;
 import cn.aurora.crm.hr.emp.dao.dao.EmpDao;
 import cn.aurora.crm.hr.emp.vo.EmpModel;
@@ -16,6 +19,14 @@ public class EmpEbo implements EmpEbi{
 		// TODO Auto-generated method stub
 		EmpModel existModel = empDao.findByName(em);
 		return existModel;
+	}
+
+	@Override
+	public void addEmploy(EmpModel em) {
+		// TODO Auto-generated method stub
+		em.setId(UUIDUtils.getUUID());
+		em.setEntryTime(new Date().getTime());
+		empDao.addEmploy(em);
 	}
 	
 	

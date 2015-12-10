@@ -1,6 +1,7 @@
 package cn.aurora.crm.hr.emp.web;
 
 import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.interceptor.annotations.InputConfig;
 
 import cn.aurora.crm.common.utils.MyActionSupport;
 import cn.aurora.crm.hr.emp.business.ebi.EmpEbi;
@@ -32,6 +33,12 @@ public class EmpAction extends MyActionSupport{
 	public String registPage() {
 		
 		return EMPACTION_REGISTPAGE;
+	}
+	@InputConfig(resultName="registInput")
+	public String regist() {
+		System.out.println(em);
+		empEbi.addEmploy(em);
+		return EMPACTION_REGISTSUCCESS;
 	}
 	
 }

@@ -8,4 +8,6 @@ public interface EmpEbi {
 
 	EmpModel findByName(EmpModel em);
 
+	void addEmploy(EmpModel em);
+
 }

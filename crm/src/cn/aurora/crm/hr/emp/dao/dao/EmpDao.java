@@ -6,4 +6,6 @@ public interface EmpDao {
 
 	EmpModel findByName(EmpModel em);
 
+	void addEmploy(EmpModel em);
+
 }
