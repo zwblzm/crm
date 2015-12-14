@@ -23,4 +23,17 @@ public class LessonImpl extends HibernateDaoSupport implements LessonDao{
 		this.getHibernateTemplate().save(lm);
 	}
 
+	@Override
+	public LessonModel get(String id) {
+		// TODO Auto-generated method stub
+		LessonModel lesson = this.getHibernateTemplate().get(LessonModel.class, id);
+		return lesson;
+	}
+
+	@Override
+	public void updateLesson(LessonModel lm) {
+		// TODO Auto-generated method stub
+		this.getHibernateTemplate().update(lm);
+	}
+
 }

@@ -24,8 +24,22 @@ public class LessonEbo implements LessonEbi{
 	@Override
 	public void addLesson(LessonModel lm) {
 		// TODO Auto-generated method stub
-		lm.setId(UUIDUtils.getUUID());
+		lm.setUuid(UUIDUtils.getUUID());
 		lessonDao.addLesson(lm);
+	}
+
+	@Override
+	public LessonModel get(String id) {
+		// TODO Auto-generated method stub
+		LessonModel lesson = lessonDao.get(id);
+		
+		return lesson;
+	}
+
+	@Override
+	public void updateLesson(LessonModel lm) {
+		// TODO Auto-generated method stub
+		lessonDao.updateLesson(lm);
 	}
 	
 	

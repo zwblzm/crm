@@ -27,4 +27,7 @@ public class MyActionSupport extends ActionSupport{
 	protected static final String LESSONACTION_LISTPAGE="listPageSuccess";
 	protected static final String LESSONACTION_ADDPAGE="addPageSuccess";
 	protected static final String LESSONACTION_ADDLESSON="addSuccess";
+	protected static final String LESSONACTION_EDITPAGESUCCESS="editPageSuccess";
+	protected static final String LESSONACTION_EDITPAGEERROR="editPageError";
+	
 }

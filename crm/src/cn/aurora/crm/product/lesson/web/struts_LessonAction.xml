@@ -3,11 +3,13 @@
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
-	<package name="lessonAction" extends="struts-default" namespace="/">
+	<package name="lesson" extends="struts-default" namespace="/">
 		<action name="lessonAction_*" class="lessonAction" method="{1}">
 			<result name="listPageSuccess">/WEB-INF/jsps/lesson/lessonList.jsp</result>
 			<result name="addPageSuccess">/WEB-INF/jsps/lesson/lessonAdd.jsp</result>
-			<result name="addSuccess" type="chain">lessonAction_listPage</result>
+			<result name="addSuccess" type="redirectAction">lessonAction_listPage.action</result>
+			<result name="editPageSuccess">/WEB-INF/jsps/lesson/lessonEdit.jsp</result>
+			<result name="editPageError">/WEB-INF/jsps/lesson/lessonEdit.jsp</result>
 		</action>
 	
 	</package>

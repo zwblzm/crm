@@ -10,4 +10,8 @@ public interface LessonDao {
 
 	void addLesson(LessonModel lm);
 
+	LessonModel get(String id);
+
+	void updateLesson(LessonModel lm);
+
 }

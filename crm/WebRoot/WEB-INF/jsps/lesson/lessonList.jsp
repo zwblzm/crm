@@ -45,13 +45,21 @@
     <td width="18%" align="center">收费标准</td>
 	<td width="11%" align="center">编辑</td>
   </tr>
-  <s:iterator value="#request.lms" var="lm">
+  <s:iterator value="#request.lms">
   <tr class="tabtd1">
-    <td align="center">${lm.name}</td>
-    <td align="center">${lm.descript }</td>
-    <td align="center">${lm.total}</td>
-    <td align="center">${lm.price}</td>
-  	<td width="11%" align="center"><a href="editlesson.html"><img src="${pageContext.request.contextPath}/images/button/modify.gif" class="img"></a></td>
+    <td align="center">${name}</td>
+    <td align="center">${descript}</td>
+    <td align="center">${total}</td>
+    <td align="center">${priceView}</td>
+  	<td width="11%" align="center">
+  	
+  
+  	<s:a action="lessonAction_editPage.action">
+  		<s:param name="lm.uuid" value="uuid"></s:param>
+  		<img src="${pageContext.request.contextPath}/images/button/modify.gif" class="img">
+  		
+  	</s:a>
+  
   </tr>
   </s:iterator>
   

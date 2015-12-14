@@ -13,4 +13,8 @@ public interface LessonEbi {
 
 	void addLesson(LessonModel lm);
 
+	LessonModel get(String id);
+
+	void updateLesson(LessonModel lm);
+
 }

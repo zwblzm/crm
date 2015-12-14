@@ -1,16 +1,25 @@
 package cn.aurora.crm.product.lesson.vo;
 
+import cn.aurora.crm.common.utils.FormatUtils;
+
 public class LessonModel {
-	private String id;
+	private String uuid;
 	private String name;
 	private Integer total;
 	private Double price;
 	private String descript;
-	public String getId() {
-		return id;
+	
+	private String priceView;
+	
+	
+	public String getPriceView() {
+		return priceView;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public String getUuid() {
+		return uuid;
+	}
+	public void setUuid(String uuid) {
+		this.uuid = uuid;
 	}
 	public String getName() {
 		return name;
@@ -28,6 +37,7 @@ public class LessonModel {
 		return price;
 	}
 	public void setPrice(Double price) {
+		priceView=FormatUtils.formatPrice(price);
 		this.price = price;
 	}
 	public String getDescript() {
@@ -38,7 +48,7 @@ public class LessonModel {
 	}
 	@Override
 	public String toString() {
-		return "LessonModel [id=" + id + ", name=" + name + ", total=" + total
+		return "LessonModel [id=" + uuid + ", name=" + name + ", total=" + total
 				+ ", price=" + price + ", descript=" + descript + "]";
 	}
 	
