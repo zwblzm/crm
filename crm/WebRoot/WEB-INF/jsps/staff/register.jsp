@@ -61,7 +61,10 @@ FONT-SIZE: 12px; COLOR: #4b4b4b; LINE-HEIGHT: 18px; TEXT-DECORATION: none
 					<br/><br/>
 					<s:password cssClass="msg" name="em.repassword">确认密码：</s:password><br/><br/>
 					<s:textfield name="em.realName" cssClass="msg">	姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</s:textfield><br/><br/>
-					
+					性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：<select multiple="multiple" size="3" >
+						<option>男</option>
+						<option>女</option>
+					</select>
 					<%-- <s:select list=""  cssClass="msg">性别：</s:select> --%>
 					
 					<br/><br/>

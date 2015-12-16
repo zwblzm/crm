@@ -12,6 +12,15 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:applicationContext*.xml</param-value>
 	</context-param>
+<!-- 	<filter>
+		<filter-name>loginFilter</filter-name>
+		<filter-class>cn.aurora.crm.common.filter.LoginFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>loginFilter</filter-name>
+		<url-pattern>*.html</url-pattern>
+	</filter-mapping> -->
 	
 	<filter>
 		<filter-name>openSessionInView</filter-name>
@@ -31,6 +40,7 @@
 		<filter-name>struts2</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
