@@ -14,4 +14,6 @@ public interface LessonDao {
 
 	void updateLesson(LessonModel lm);
 
+	void deleteLesson(String uuid);
+
 }

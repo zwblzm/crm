@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 	xmlns="http://www.springframework.org/schema/beans"
+       	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      	xmlns:context="http://www.springframework.org/schema/context"
+      	xmlns:aop="http://www.springframework.org/schema/aop"
+       	xmlns:tx="http://www.springframework.org/schema/tx"
+       	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx.xsd
+		">
+	<bean id="clazzAction" class="cn.aurora.crm.product.clazz.web.ClazzAction">
+		<property name="clazzEbi" ref="clazzEbi"></property>
+		<property name="lessonEbi" ref="lessonEbi"></property>
+	</bean>
+	
+	<bean id="clazzEbi" class="cn.aurora.crm.product.clazz.business.ebo.ClazzEbo">
+		<property name="clazzDao" ref="clazzDao"></property>
+	</bean>
+	
+	<bean id="clazzDao" class="cn.aurora.crm.product.clazz.dao.impl.ClazzImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+</beans>

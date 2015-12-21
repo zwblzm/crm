@@ -41,6 +41,12 @@ public class LessonEbo implements LessonEbi{
 		// TODO Auto-generated method stub
 		lessonDao.updateLesson(lm);
 	}
+
+	@Override
+	public void deleteLesson(String uuid) {
+		// TODO Auto-generated method stub
+		lessonDao.deleteLesson(uuid);
+	}
 	
 	
 }

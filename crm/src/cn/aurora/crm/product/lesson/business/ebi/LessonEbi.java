@@ -17,4 +17,6 @@ public interface LessonEbi {
 
 	void updateLesson(LessonModel lm);
 
+	void deleteLesson(String uuid);
+
 }

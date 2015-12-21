@@ -1,11 +1,13 @@
 package cn.aurora.crm.hr.emp.web;
 
-import com.opensymphony.xwork2.ActionContext;
-import com.opensymphony.xwork2.interceptor.annotations.InputConfig;
+import java.util.List;
 
 import cn.aurora.crm.common.utils.MyActionSupport;
 import cn.aurora.crm.hr.emp.business.ebi.EmpEbi;
 import cn.aurora.crm.hr.emp.vo.EmpModel;
+
+import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.interceptor.annotations.InputConfig;
 
 public class EmpAction extends MyActionSupport{
 	public EmpModel em = new EmpModel();
@@ -39,6 +41,13 @@ public class EmpAction extends MyActionSupport{
 		System.out.println(em);
 		empEbi.addEmploy(em);
 		return EMPACTION_REGISTSUCCESS;
+	}
+	
+	public String listPage() {
+		List<EmpModel> emps = empEbi.findAll();
+		System.out.println(emps);
+		putRequest("emps", emps);
+		return EMPACTION_LISTPAGE;
 	}
 	
 }

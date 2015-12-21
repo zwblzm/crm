@@ -36,4 +36,10 @@ public class LessonImpl extends HibernateDaoSupport implements LessonDao{
 		this.getHibernateTemplate().update(lm);
 	}
 
+	@Override
+	public void deleteLesson(String uuid) {
+		// TODO Auto-generated method stub
+		this.getHibernateTemplate().delete(uuid);
+	}
+
 }

@@ -24,4 +24,12 @@ public class EmpImpl extends HibernateDaoSupport implements EmpDao{
 		this.getHibernateTemplate().save(em);
 	}
 
+	@Override
+	public List<EmpModel> findAll() {
+		// TODO Auto-generated method stub
+		String hql="From EmpModel";
+		List<EmpModel> emps = this.getHibernateTemplate().find(hql);
+		return emps;
+	}
+
 }

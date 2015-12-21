@@ -10,6 +10,7 @@
 			<result name="registPage">/WEB-INF/jsps/staff/register.jsp</result>
 			<result name="registSuccess">/WEB-INF/jsps/login.jsp</result>
 			<result name="registInput">/WEB-INF/jsps/staff/register.jsp</result>
+			<result name="listpage">/WEB-INF/jsps/staff/staffList.jsp</result>
 		</action>
 	
 	</package>

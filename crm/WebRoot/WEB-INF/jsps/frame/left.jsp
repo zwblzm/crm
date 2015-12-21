@@ -23,14 +23,14 @@
 		d.add('010202','0102','学生升级/留班','${pageContext.request.contextPath}/html/role/listRolePri.html','','right');
 		d.add('010203','0102','学生流失情况','${pageContext.request.contextPath}/html/privilege/listPrivilege.html','','right');		
 		d.add('0103','01','教学部');
-		d.add('010301','0103','班级管理','${pageContext.request.contextPath}/html/classesm/listClass.html','','right');
+		d.add('010301','0103','班级管理','${pageContext.request.contextPath}/clazzAction_listPage.action','','right');
 		d.add('010302','0103','课程类别','${pageContext.request.contextPath}/lessonAction_listPage.action','','right');
 		d.add('0104','01','就业部');
 		d.add('010401','0104','就业情况','${pageContext.request.contextPath}/html/dept/listDept.html','','right');
 		d.add('0105','01','人力资源部');
 		d.add('010501','0105','部门管理','${pageContext.request.contextPath}/depAction_listPage.action','','right');
 		d.add('010502','0105','职务管理','${pageContext.request.contextPath}/posAction_listPage.action','','right');
-		d.add('010503','0105','员工管理','${pageContext.request.contextPath}/html/staff/listStaff.html','','right');
+		d.add('010503','0105','员工管理','${pageContext.request.contextPath}/empAction_listPage.action','','right');
 		document.write(d);
 	</script>
 </div>

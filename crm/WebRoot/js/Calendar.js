@@ -11,7 +11,7 @@ bodyHolidayFontColor     : "#ff0000", //假日字体色
 watermarkColor 		    : "#d4d4d4",  //背景水印色
 moreDayColor             : "#cccccc" 
 };
-this.showMoreDay = false; //是否显示上月和下月的日期
+this.showMoreDay = true; //是否显示上月和下月的日期
 this.Obj = objName;		
 this.date = null;
 this.mouseOffset = null;

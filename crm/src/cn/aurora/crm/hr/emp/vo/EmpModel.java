@@ -1,5 +1,8 @@
 package cn.aurora.crm.hr.emp.vo;
 
+import cn.aurora.crm.hr.dep.vo.DepModel;
+import cn.aurora.crm.hr.position.vo.PosModel;
+
 public class EmpModel {
 	private String id;
 	private String code;
@@ -11,6 +14,17 @@ public class EmpModel {
 	private Long birthday;
 	private Long entryTime;
 	private Integer status;
+	
+	private PosModel pos;
+	
+	
+	public PosModel getPos() {
+		return pos;
+	}
+	public void setPos(PosModel pos) {
+		this.pos = pos;
+	}
+	
 	public String getId() {
 		return id;
 	}
@@ -77,10 +91,12 @@ public class EmpModel {
 	@Override
 	public String toString() {
 		return "EmpModel [id=" + id + ", code=" + code + ", name=" + name
-				+ ", password=" + password + ", repassword=" + repassword
-				+ ", gender=" + gender + ", birthday=" + birthday
-				+ ", entryTime=" + entryTime + ", status=" + status + "]";
+				+ ", realName=" + realName + ", password=" + password
+				+ ", repassword=" + repassword + ", gender=" + gender
+				+ ", birthday=" + birthday + ", entryTime=" + entryTime
+				+ ", status=" + status + ", pos=" + pos + "]";
 	}
+	
 	
 	
 	

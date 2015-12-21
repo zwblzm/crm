@@ -24,6 +24,10 @@ public class PosModel {
 	public void setDm(DepModel dm) {
 		this.dm = dm;
 	}
+	@Override
+	public String toString() {
+		return "PosModel [id=" + id + ", name=" + name + ", dm=" + dm + "]";
+	}
 	
 	
 }

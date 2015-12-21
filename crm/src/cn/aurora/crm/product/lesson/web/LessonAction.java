@@ -48,6 +48,11 @@ public class LessonAction extends MyActionSupport{
 		}
 	}
 	
+	public String deleteLesson() {
+		lessonEbi.deleteLesson(lm.getUuid());
+		return null;
+	}
+	
 	public String edit() {
 		lessonEbi.updateLesson(lm);
 		return LESSONACTION_LISTPAGE;

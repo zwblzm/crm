@@ -1,5 +1,6 @@
 package cn.aurora.crm.common.utils;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class MyActionSupport extends ActionSupport{
@@ -15,6 +16,7 @@ public class MyActionSupport extends ActionSupport{
 	protected static final String EMPACTION_LOGINERROR="loginError";
 	protected static final String EMPACTION_REGISTPAGE="registPage";
 	protected static final String EMPACTION_REGISTSUCCESS="registSuccess";
+	protected static final String EMPACTION_LISTPAGE="listpage";
 	
 	protected static final String DEPACTION_LISTPAGESUCCESS="listPageSuccess";
 	protected static final String DEPACTION_ADDSUCCESS="addSuccess";
@@ -29,5 +31,18 @@ public class MyActionSupport extends ActionSupport{
 	protected static final String LESSONACTION_ADDLESSON="addSuccess";
 	protected static final String LESSONACTION_EDITPAGESUCCESS="editPageSuccess";
 	protected static final String LESSONACTION_EDITPAGEERROR="editPageError";
+	
+	protected static final String CLAZZACTION_LISTPAGE="listpage";
+	protected static final String CLAZZACTION_ADDPAGE="addpage";
+	protected static final String CLAZZACTION_ADDSUCCESS="addSuccess";
+	
+	protected  void putRequest(String name, Object value) {
+		ActionContext.getContext().put(name, value);
+	}
+	
+	protected  void putSession(String name, Object value) {
+		ActionContext.getContext().getSession().put(name, value);
+	}
+	
 	
 }
