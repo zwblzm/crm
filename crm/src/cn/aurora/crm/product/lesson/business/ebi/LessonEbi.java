@@ -19,4 +19,8 @@ public interface LessonEbi {
 
 	void deleteLesson(String uuid);
 
+	List<LessonModel> findByPage(Integer pageNum, Integer preNum);
+
+	Integer getCount();
+
 }

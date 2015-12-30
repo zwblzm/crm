@@ -16,4 +16,8 @@ public interface LessonDao {
 
 	void deleteLesson(String uuid);
 
+	List<LessonModel> findByPage(Integer pageNum, Integer preNum);
+
+	Integer getCount();
+
 }

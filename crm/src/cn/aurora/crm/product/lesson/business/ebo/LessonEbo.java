@@ -47,6 +47,20 @@ public class LessonEbo implements LessonEbi{
 		// TODO Auto-generated method stub
 		lessonDao.deleteLesson(uuid);
 	}
+
+	@Override
+	public List<LessonModel> findByPage(Integer pageNum, Integer preNum) {
+		// TODO Auto-generated method stub
+		List<LessonModel> lessons = lessonDao.findByPage(pageNum, preNum);
+		return lessons;
+	}
+
+	@Override
+	public Integer getCount() {
+		// TODO Auto-generated method stub
+		
+		return lessonDao.getCount();
+	}
 	
 	
 }

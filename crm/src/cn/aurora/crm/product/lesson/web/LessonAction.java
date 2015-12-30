@@ -19,9 +19,10 @@ public class LessonAction extends MyActionSupport{
 	}
 	
 	public String listPage() {
-		List<LessonModel> lms = lessonEbi.findAll();
-		
-		ActionContext.getContext().put("lms", lms);
+		List<LessonModel> lessons = lessonEbi.findByPage(pageNum, preNum);
+		Integer count = lessonEbi.getCount();
+		setTotalPage(count);
+		putRequest("lessons", lessons);
 		return LESSONACTION_LISTPAGE;
 	}
 	

@@ -2,6 +2,8 @@ package cn.aurora.crm.product.lesson.dao.impl;
 
 import java.util.List;
 
+import org.hibernate.criterion.DetachedCriteria;
+import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import cn.aurora.crm.product.lesson.dao.dao.LessonDao;
@@ -40,6 +42,22 @@ public class LessonImpl extends HibernateDaoSupport implements LessonDao{
 	public void deleteLesson(String uuid) {
 		// TODO Auto-generated method stub
 		this.getHibernateTemplate().delete(uuid);
+	}
+
+	@Override
+	public List<LessonModel> findByPage(Integer pageNum, Integer preNum) {
+		// TODO Auto-generated method stub
+		DetachedCriteria criteria = DetachedCriteria.forClass(LessonModel.class);
+		List<LessonModel> lessons = this.getHibernateTemplate().findByCriteria(criteria, (pageNum-1)*preNum, preNum);
+		return lessons;
+	}
+
+	@Override
+	public Integer getCount() {
+		// TODO Auto-generated method stub
+		DetachedCriteria criteria = DetachedCriteria.forClass(LessonModel.class);
+		Integer count = this.getHibernateTemplate().findByCriteria(criteria).size();
+		return count;
 	}
 
 }

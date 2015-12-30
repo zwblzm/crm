@@ -27,4 +27,8 @@ public class CommonAction extends MyActionSupport{
 	public String rightPage() {
 		return FRAME_RIGHTPAGESUCCESS;
 	}
+	
+	public String page() {
+		return FRAME_PAGESUCCESS;
+	}
 }

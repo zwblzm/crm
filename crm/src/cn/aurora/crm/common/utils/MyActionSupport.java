@@ -4,6 +4,10 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class MyActionSupport extends ActionSupport{
+	
+	public Integer pageNum=1;
+	public Integer preNum=2;
+	public Integer totalPage = 0;
 
 	protected static final String FRAME_TOPPAGESUCCESS="topPageSuccess";
 	protected static final String FRAME_CONTROLPAGESUCCESS="controlPageSuccess";
@@ -35,6 +39,11 @@ public class MyActionSupport extends ActionSupport{
 	protected static final String CLAZZACTION_LISTPAGE="listpage";
 	protected static final String CLAZZACTION_ADDPAGE="addpage";
 	protected static final String CLAZZACTION_ADDSUCCESS="addSuccess";
+	protected static final String FRAME_PAGESUCCESS="pageSuccess";
+	
+	protected void setTotalPage(Integer count) {
+		this.totalPage = (count+preNum-1)/preNum;
+	}
 	
 	protected  void putRequest(String name, Object value) {
 		ActionContext.getContext().put(name, value);

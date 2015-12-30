@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<c:set var="ctx" value="${pageContext.request.contextPath}"></c:set>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,6 +12,7 @@
 
 <link href="${pageContext.request.contextPath}/css/sys.css" type="text/css" rel="stylesheet" />
 
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.3.1.js"></script>
 </head>
 
 <body >
@@ -45,7 +49,7 @@
     <td width="18%" align="center">收费标准</td>
 	<td width="11%" align="center">编辑</td>
   </tr>
-  <s:iterator value="#request.lms">
+  <s:iterator value="#request.lessons">
   <tr class="tabtd1">
     <td align="center">${name}</td>
     <td align="center">${descript}</td>
@@ -68,18 +72,8 @@
   </s:iterator>
   
 </table>
-<table border="0" cellspacing="0" cellpadding="0" align="center">
-  <tr>
-    <td align="right">
-    	<span>第1/3页</span>
-        <span>
-        	<a href="#">[首页]</a>&nbsp;&nbsp;
-            <a href="#">[上一页]</a>&nbsp;&nbsp;
-            <a href="#">[下一页]</a>&nbsp;&nbsp;
-            <a href="#">[尾页]</a>
-        </span>
-    </td>
-  </tr>
-</table>
+<%@include file="/WEB-INF/jsps/pageUtils.jsp" %>
+
 </body>
+
 </html>
