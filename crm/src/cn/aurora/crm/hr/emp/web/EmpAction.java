@@ -3,6 +3,7 @@ package cn.aurora.crm.hr.emp.web;
 import java.util.List;
 
 import cn.aurora.crm.common.utils.MyActionSupport;
+import cn.aurora.crm.hr.dep.business.ebi.DepEbi;
 import cn.aurora.crm.hr.emp.business.ebi.EmpEbi;
 import cn.aurora.crm.hr.emp.vo.EmpModel;
 
@@ -12,6 +13,7 @@ import com.opensymphony.xwork2.interceptor.annotations.InputConfig;
 public class EmpAction extends MyActionSupport{
 	public EmpModel em = new EmpModel();
 	private EmpEbi empEbi;
+	private DepEbi depEbi;
 
 	public void setEmpEbi(EmpEbi empEbi) {
 		this.empEbi = empEbi;
@@ -48,6 +50,14 @@ public class EmpAction extends MyActionSupport{
 		System.out.println(emps);
 		putRequest("emps", emps);
 		return EMPACTION_LISTPAGE;
+	}
+	
+	public String toUpd() {
+		em = empEbi.getByUuid(em.getId());
+		
+		
+		
+		return null;
 	}
 	
 }

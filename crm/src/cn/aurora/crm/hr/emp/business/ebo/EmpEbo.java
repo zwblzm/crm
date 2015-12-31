@@ -36,6 +36,13 @@ public class EmpEbo implements EmpEbi{
 		List<EmpModel> emps = empDao.findAll();
 		return emps;
 	}
+
+	@Override
+	public EmpModel getByUuid(String id) {
+		// TODO Auto-generated method stub
+		EmpModel em = empDao.findByUuid(String id);
+		return em;
+	}
 	
 	
 }

@@ -12,4 +12,6 @@ public interface EmpDao {
 
 	List<EmpModel> findAll();
 
+	EmpModel findByUuid(String id);
+
 }

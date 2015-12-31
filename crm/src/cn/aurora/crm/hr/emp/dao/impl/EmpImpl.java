@@ -2,6 +2,10 @@ package cn.aurora.crm.hr.emp.dao.impl;
 
 import java.util.List;
 
+import org.hibernate.criterion.DetachedCriteria;
+import org.hibernate.criterion.Projection;
+import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import cn.aurora.crm.hr.emp.dao.dao.EmpDao;
@@ -30,6 +34,15 @@ public class EmpImpl extends HibernateDaoSupport implements EmpDao{
 		String hql="From EmpModel";
 		List<EmpModel> emps = this.getHibernateTemplate().find(hql);
 		return emps;
+	}
+
+	@Override
+	public EmpModel findByUuid(String id) {
+		// TODO Auto-generated method stub
+		DetachedCriteria criteria = DetachedCriteria.forClass(EmpModel.class);
+		criteria.add(Restrictions.eq("id", id));
+		List<EmpModel> emp =  this.getHibernateTemplate().findByCriteria(criteria);
+		return emp.get(0);
 	}
 
 }
