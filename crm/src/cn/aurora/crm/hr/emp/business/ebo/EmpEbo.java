@@ -25,7 +25,7 @@ public class EmpEbo implements EmpEbi{
 	@Override
 	public void addEmploy(EmpModel em) {
 		// TODO Auto-generated method stub
-		em.setId(UUIDUtils.getUUID());
+		em.setUuid(UUIDUtils.getUUID());
 		em.setEntryTime(new Date().getTime());
 		empDao.addEmploy(em);
 	}
@@ -38,9 +38,9 @@ public class EmpEbo implements EmpEbi{
 	}
 
 	@Override
-	public EmpModel getByUuid(String id) {
+	public EmpModel findByUuid(String id) {
 		// TODO Auto-generated method stub
-		EmpModel em = empDao.findByUuid(String id);
+		EmpModel em = empDao.findByUuid(id);
 		return em;
 	}
 	

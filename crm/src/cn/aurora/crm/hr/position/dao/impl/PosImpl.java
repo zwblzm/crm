@@ -29,4 +29,11 @@ public class PosImpl extends HibernateDaoSupport implements PosDao{
 		return poss;
 	}
 
+	@Override
+	public List<PosModel> findByDid(String id) {
+		String hql = "From PosModel where did=?";
+		List<PosModel> poss = this.getHibernateTemplate().find(hql,id);
+		return poss;
+	}
+
 }

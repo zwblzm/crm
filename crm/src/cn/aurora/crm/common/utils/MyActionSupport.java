@@ -21,6 +21,8 @@ public class MyActionSupport extends ActionSupport{
 	protected static final String EMPACTION_REGISTPAGE="registPage";
 	protected static final String EMPACTION_REGISTSUCCESS="registSuccess";
 	protected static final String EMPACTION_LISTPAGE="listpage";
+	protected static final String EMPACTION_EDITPAGE="editpage";
+	protected static final String EMPACTION_EMPUPD="empupd";
 	
 	protected static final String DEPACTION_LISTPAGESUCCESS="listPageSuccess";
 	protected static final String DEPACTION_ADDSUCCESS="addSuccess";
@@ -29,6 +31,7 @@ public class MyActionSupport extends ActionSupport{
 	protected static final String POSITIONACTION_ADDSUCCESS="addSuccess";
 	protected static final String POSITIONACTION_ADDPAGESUCCESS="addPageSuccess";
 	protected static final String POSITIONACTION_LISTPAGESUCCESS="listPageSuccess";
+	protected static final String POSITIONACTION_AJAXSUCCESS="ajaxSuccess";
 	
 	protected static final String LESSONACTION_LISTPAGE="listPageSuccess";
 	protected static final String LESSONACTION_ADDPAGE="addPageSuccess";

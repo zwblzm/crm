@@ -10,4 +10,6 @@ public interface PosDao {
 
 	List<PosModel> findAll();
 
+	List<PosModel> findByDid(String id);
+
 }

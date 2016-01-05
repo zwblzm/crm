@@ -16,7 +16,7 @@
             <frame src="${pageContext.request.contextPath}/common/common_left2Page.action" scrolling="no"/>
         </frameset>
         <frame src="${pageContext.request.contextPath}/common/common_controlPage.action" scrolling="no"/>
-        <frame src="${pageContext.request.contextPath}/common/common_rightPage.action" name="right" scrolling="no"/>
+        <frame src="${pageContext.request.contextPath}/common/common_rightPage.action" name="right" scrolling="auto"/>
 	</frameset>
 </frameset>
 </html>

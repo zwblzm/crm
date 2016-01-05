@@ -14,6 +14,6 @@ public interface EmpEbi {
 
 	List<EmpModel> findAll();
 
-	EmpModel getByUuid(String id);
+	EmpModel findByUuid(String id);
 
 }

@@ -2,6 +2,9 @@ package cn.aurora.crm.hr.position.web;
 
 import java.util.List;
 
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletRequestWrapper;
+
 import com.opensymphony.xwork2.ActionContext;
 
 import cn.aurora.crm.common.utils.MyActionSupport;
@@ -14,8 +17,12 @@ public class PosAction extends MyActionSupport{
 	public PosModel pm = new PosModel();
 	private PosEbi posEbi;
 	private DepEbi depEbi;
+	private List<PosModel> posList;
 	
 	
+	public List<PosModel> getPosList() {
+		return posList;
+	}
 	public void setDepEbi(DepEbi depEbi) {
 		this.depEbi = depEbi;
 	}
@@ -39,6 +46,13 @@ public class PosAction extends MyActionSupport{
 		posEbi.addPos(pm);
 		
 		return POSITIONACTION_ADDSUCCESS;
+	}
+	
+	public String ajaxGetPosition() {
+		posList = posEbi.findByDid(pm.getDm().getId());
+		
+		
+		return POSITIONACTION_AJAXSUCCESS;
 	}
 	
 }

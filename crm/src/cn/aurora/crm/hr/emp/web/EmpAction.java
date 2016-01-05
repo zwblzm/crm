@@ -4,8 +4,11 @@ import java.util.List;
 
 import cn.aurora.crm.common.utils.MyActionSupport;
 import cn.aurora.crm.hr.dep.business.ebi.DepEbi;
+import cn.aurora.crm.hr.dep.vo.DepModel;
 import cn.aurora.crm.hr.emp.business.ebi.EmpEbi;
 import cn.aurora.crm.hr.emp.vo.EmpModel;
+import cn.aurora.crm.hr.position.business.ebi.PosEbi;
+import cn.aurora.crm.hr.position.vo.PosModel;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.interceptor.annotations.InputConfig;
@@ -14,6 +17,19 @@ public class EmpAction extends MyActionSupport{
 	public EmpModel em = new EmpModel();
 	private EmpEbi empEbi;
 	private DepEbi depEbi;
+	private PosEbi posEbi;
+	
+	
+	
+
+	
+	public void setDepEbi(DepEbi depEbi) {
+		this.depEbi = depEbi;
+	}
+
+	public void setPosEbi(PosEbi posEbi) {
+		this.posEbi = posEbi;
+	}
 
 	public void setEmpEbi(EmpEbi empEbi) {
 		this.empEbi = empEbi;
@@ -40,24 +56,32 @@ public class EmpAction extends MyActionSupport{
 	}
 	@InputConfig(resultName="registInput")
 	public String regist() {
-		System.out.println(em);
+		
 		empEbi.addEmploy(em);
 		return EMPACTION_REGISTSUCCESS;
 	}
 	
 	public String listPage() {
 		List<EmpModel> emps = empEbi.findAll();
-		System.out.println(emps);
+		
 		putRequest("emps", emps);
 		return EMPACTION_LISTPAGE;
 	}
 	
 	public String toUpd() {
-		em = empEbi.getByUuid(em.getId());
+		//获取员工信息
+		em = empEbi.findByUuid(em.getUuid());
+		//获取部门信息
+		List<DepModel> deps = depEbi.findAll();
+		List<PosModel> poss = posEbi.findAll();
 		
-		
-		
-		return null;
+		putRequest("deps", deps);
+		putRequest("poss", poss);
+		return EMPACTION_EDITPAGE;
+	}
+	
+	public String upd() {
+		return EMPACTION_EMPUPD;
 	}
 	
 }

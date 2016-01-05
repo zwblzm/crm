@@ -35,6 +35,7 @@
     <td ><img src="${pageContext.request.contextPath}/images/result.gif"/></td>
   </tr>
 </table>
+
 <table width="100%" border="1" >
   <tr class="henglan" style="font-weight:bold;">
     <td width="10%" align="center">编号</td>
@@ -46,7 +47,7 @@
     <td width="10%" align="center">职务</td>
     <td width="10%" align="center">编辑</td>
   </tr>
-  <s:iterator value="#request.emps">
+  <s:iterator value="#request.emps" >
   <tr class="tabtd2">
     <td align="center">${code}</td>
     <td align="center">${name}</td>
@@ -54,8 +55,20 @@
     <td align="center">${birthday}</td>
     <td align="center">${entryTime}</td>
     <td align="center">${pos.name}</td>
-    <td align="center">${pos.dep.name}</td>
-  	<td width="7%" align="center"><a href="editStaff.html"><img src="${pageContext.request.contextPath}/images/button/modify.gif" class="img"></a></td>
+    <td align="center">${pos.dm.name}</td>
+  	<td width="7%" align="center">
+  	
+  	
+  	<s:a action="empAction_toUpd.action" >
+  		<s:param name="em.uuid" value="uuid" ></s:param>
+  		
+  		<img src="${pageContext.request.contextPath}/images/button/modify.gif" class="img">
+  		
+  		
+  	
+  	</s:a>
+  	</td>
+  
   </tr>
   </s:iterator>
  

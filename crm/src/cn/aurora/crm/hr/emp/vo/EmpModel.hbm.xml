@@ -5,7 +5,7 @@
 <hibernate-mapping>
 	<class name="cn.aurora.crm.hr.emp.vo.EmpModel" table="tbl_emp" lazy="false">
 	
-		<id name="id">
+		<id name="uuid" column="id">
 			<generator class="assigned"></generator>
 		</id>
 		
@@ -19,7 +19,7 @@
 		<property name="status"></property>
 		
 		<many-to-one name="pos" class="cn.aurora.crm.hr.position.vo.PosModel" column="pid" lazy="false"></many-to-one>
-		
+		<many-to-one name="dep" class="cn.aurora.crm.hr.dep.vo.DepModel" column="did" lazy="false"></many-to-one>
 	</class>
 	
 </hibernate-mapping>

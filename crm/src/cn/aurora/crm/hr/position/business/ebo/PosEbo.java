@@ -29,6 +29,13 @@ public class PosEbo implements PosEbi{
 		
 		return poss;
 	}
+
+	@Override
+	public List<PosModel> findByDid(String id) {
+		// TODO Auto-generated method stub
+		List<PosModel> poss = posDao.findByDid(id);
+		return poss;
+	}
 	
 	
 }

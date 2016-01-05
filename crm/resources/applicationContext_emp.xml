@@ -16,6 +16,8 @@
 		">
 	<bean id="empAction" class="cn.aurora.crm.hr.emp.web.EmpAction" scope="prototype">
 		<property name="empEbi" ref="empEbi"></property>
+		<property name="depEbi" ref="depEbi"></property>
+		<property name="posEbi" ref="posEbi"></property>
 	</bean>
 	
 	<bean id="empEbi" class="cn.aurora.crm.hr.emp.business.ebo.EmpEbo">

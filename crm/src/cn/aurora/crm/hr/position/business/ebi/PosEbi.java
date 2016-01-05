@@ -13,4 +13,6 @@ public interface PosEbi {
 
 	List<PosModel> findAll();
 
+	List<PosModel> findByDid(String id);
+
 }

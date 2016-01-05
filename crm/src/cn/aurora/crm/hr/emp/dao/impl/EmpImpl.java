@@ -39,9 +39,11 @@ public class EmpImpl extends HibernateDaoSupport implements EmpDao{
 	@Override
 	public EmpModel findByUuid(String id) {
 		// TODO Auto-generated method stub
+		
 		DetachedCriteria criteria = DetachedCriteria.forClass(EmpModel.class);
 		criteria.add(Restrictions.eq("id", id));
 		List<EmpModel> emp =  this.getHibernateTemplate().findByCriteria(criteria);
+		
 		return emp.get(0);
 	}
 

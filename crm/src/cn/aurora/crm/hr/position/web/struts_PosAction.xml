@@ -4,14 +4,24 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
 	
-	<package name="position" extends="struts-default" namespace="/">
+	<package name="position" extends="json-default" namespace="/">
 		
 		<action name="posAction_*" class="posAction" method="{1}">
 			<result name="listPageSuccess">/WEB-INF/jsps/position/listPosition.jsp</result>
 			<result name="addPageSuccess">/WEB-INF/jsps/position/posAddPage.jsp</result>
 			<result name="addSuccess" type="redirectAction">posAction_listPage.action</result>
+			<result name="ajaxSuccess" type="json">
+				<param name="root">action</param>
+				<param name="includeProperties">
+    				posList\[\d+\]\.id,
+    				posList\[\d+\]\.name
+    			</param>
+				
+			</result>
 		</action>
-	
+		
+		
+		
 	</package>
 
 </struts>
