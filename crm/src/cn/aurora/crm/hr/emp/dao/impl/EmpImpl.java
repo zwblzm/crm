@@ -47,4 +47,10 @@ public class EmpImpl extends HibernateDaoSupport implements EmpDao{
 		return emp.get(0);
 	}
 
+	@Override
+	public void updateEmp(EmpModel em) {
+		// TODO Auto-generated method stub
+		this.getHibernateTemplate().update(em);
+	}
+
 }

@@ -14,13 +14,13 @@ public class PosImpl extends HibernateDaoSupport implements PosDao{
 
 	@Override
 	public void addPos(PosModel pm) {
-		// TODO Auto-generated method stub
+		
 		this.getHibernateTemplate().save(pm);
 	}
 
 	@Override
 	public List<PosModel> findAll() {
-		// TODO Auto-generated method stub
+	
 		SessionFactory factory = this.getSessionFactory();
 		Session session = factory.openSession();
 		Criteria criteria = session.createCriteria(PosModel.class);

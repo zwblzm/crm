@@ -3,6 +3,10 @@ package cn.aurora.crm.hr.emp.business.ebo;
 import java.util.Date;
 import java.util.List;
 
+import org.hibernate.SessionFactory;
+
+import com.sun.xml.internal.bind.v2.TODO;
+
 import cn.aurora.crm.common.utils.UUIDUtils;
 import cn.aurora.crm.hr.emp.business.ebi.EmpEbi;
 import cn.aurora.crm.hr.emp.dao.dao.EmpDao;
@@ -32,16 +36,24 @@ public class EmpEbo implements EmpEbi{
 
 	@Override
 	public List<EmpModel> findAll() {
-		// TODO Auto-generated method stub
+		
 		List<EmpModel> emps = empDao.findAll();
 		return emps;
 	}
 
 	@Override
 	public EmpModel findByUuid(String id) {
-		// TODO Auto-generated method stub
+	
 		EmpModel em = empDao.findByUuid(id);
 		return em;
+	}
+
+	@Override
+	public void updateEmp(EmpModel em) {
+		
+		EmpModel temp = empDao.findByUuid(em.getUuid());
+		//TODO 完成更新功能
+		
 	}
 	
 	

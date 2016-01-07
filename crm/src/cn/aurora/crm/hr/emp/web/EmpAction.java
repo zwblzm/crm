@@ -73,7 +73,7 @@ public class EmpAction extends MyActionSupport{
 		em = empEbi.findByUuid(em.getUuid());
 		//获取部门信息
 		List<DepModel> deps = depEbi.findAll();
-		List<PosModel> poss = posEbi.findAll();
+		List<PosModel> poss = posEbi.findByDid(em.getPos().getDm().getId());
 		
 		putRequest("deps", deps);
 		putRequest("poss", poss);
@@ -81,6 +81,8 @@ public class EmpAction extends MyActionSupport{
 	}
 	
 	public String upd() {
+		
+		empEbi.updateEmp(em);
 		return EMPACTION_EMPUPD;
 	}
 	

@@ -51,9 +51,9 @@
   <tr class="tabtd2">
     <td align="center">${code}</td>
     <td align="center">${name}</td>
-    <td align="center">${gender}</td>
-    <td align="center">${birthday}</td>
-    <td align="center">${entryTime}</td>
+    <td align="center">${genderView}</td>
+    <td align="center">${birthdayView}</td>
+    <td align="center">${entryTimeView}</td>
     <td align="center">${pos.name}</td>
     <td align="center">${pos.dm.name}</td>
   	<td width="7%" align="center">

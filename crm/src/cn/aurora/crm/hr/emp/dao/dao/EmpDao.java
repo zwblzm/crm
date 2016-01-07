@@ -14,4 +14,6 @@ public interface EmpDao {
 
 	EmpModel findByUuid(String id);
 
+	void updateEmp(EmpModel em);
+
 }

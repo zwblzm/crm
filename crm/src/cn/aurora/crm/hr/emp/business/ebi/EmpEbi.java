@@ -16,4 +16,6 @@ public interface EmpEbi {
 
 	EmpModel findByUuid(String id);
 
+	void updateEmp(EmpModel em);
+
 }

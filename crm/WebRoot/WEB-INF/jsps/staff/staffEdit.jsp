@@ -27,26 +27,27 @@
     <td width="44%" align="left">[员工管理]</td>
    
     <td width="52%"align="right">
-       <a href="#"><img src="${pageContext.request.contextPath}/images/button/save.gif" /></a>
-       <a href="#"><img src="${pageContext.request.contextPath}/images/button/tuihui.gif" /></a>
+       <a href="javascript:void(0);" onclick="javascript:document.forms[0].submit();"><img src="${pageContext.request.contextPath}/images/button/save.gif" /></a>
+       <a href="javascript:void(0);" onclick="javascript:history.back();"><img src="${pageContext.request.contextPath}/images/button/tuihui.gif" /></a>
       
     </td>
     <td width="3%" align="right"><img src="${pageContext.request.contextPath}/images/tright.gif"/></td>
   </tr>
 </table>
-
+<s:form action="empAction_upd.action" method="POST">
 <table width="88%" border="0" class="emp_table" style="width:80%;">
+	<s:hidden name="em.uuid"></s:hidden>
  <tr>
     <td>姓名：</td>
-    <td><s:textfield name="em.name"> </s:textfield></td>
+    <td>${em.name}</td>
     <td>性别：</td>
-    <td><s:textfield name="em.genderView"> </s:textfield></td>
+    <td>${em.genderView}</td>
   </tr>
   <tr>
     <td width="10%">出生日期：</td>
-    <td width="20%"><s:textfield name="em.birthdayView"> </s:textfield></td>
+    <td width="20%">${em.birthdayView}</td>
     <td width="8%">入职时间：</td>
-    <td width="62%"><s:textfield name="em.entryTimeView"> </s:textfield></td>
+    <td width="62%">${em.entryTimeView}</td>
   </tr>
  <tr>
     <td width="10%">所属部门：</td>
@@ -59,6 +60,7 @@
     <td width="20%"><s:textfield name="em.code"></s:textfield></td>
   </tr>
 </table>
+</s:form>
 </body>
 <script type="text/javascript">
 	$(document).ready(
